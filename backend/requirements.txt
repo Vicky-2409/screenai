@@ -1,0 +1,49 @@
+# Web framework
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+gunicorn==23.0.0
+python-multipart==0.0.20
+
+# Settings / validation
+pydantic==2.10.4
+pydantic-settings==2.7.1
+email-validator==2.2.0
+
+# Database
+sqlalchemy==2.0.36
+psycopg[binary]==3.2.3
+alembic==1.14.0
+pgvector==0.3.6
+
+# Auth / security
+bcrypt==4.2.1
+pyjwt==2.10.1
+
+# Async tasks
+celery==5.4.0
+redis==5.2.1
+
+# Resume parsing / NLP
+pymupdf==1.25.1
+pdfplumber==0.11.4
+python-docx==1.1.2
+spacy==3.8.3
+
+# AI providers
+openai==1.59.6
+sentence-transformers==3.3.1
+numpy==1.26.4
+
+# Reports
+reportlab==4.2.5
+
+# Utilities
+slowapi==0.1.9
+tenacity==9.0.0
+python-json-logger==3.2.1
+
+# Testing
+pytest==8.3.4
+pytest-asyncio==0.25.1
+pytest-cov==6.0.0
+httpx==0.28.1

@@ -6,9 +6,16 @@ skipped automatically so unit tests still pass in isolation.
 """
 from __future__ import annotations
 
+import os
+import tempfile
 import uuid
 
 import pytest
+
+# Tests must never write to the production default ("/data/uploads"), which is not
+# writable in CI. Point uploads at a writable temp dir before any app import loads
+# the settings singleton. An explicit UPLOAD_DIR from the environment still wins.
+os.environ.setdefault("UPLOAD_DIR", os.path.join(tempfile.gettempdir(), "ats_test_uploads"))
 
 
 def _db_available() -> bool:
